@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Implementing Email Input</title>
+    </head>
+    <body>
+        <h1>Email Input</h1>
+        <form action="/submit" method="post">
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" pattern="[a-zA-Z0-9_.]+@[a-zA-Z0-9.]+.[a-zA-Z0-9_.]" placeholder="Enter your email" required>
+
+            <button type="submit">Submit</button>
+
+            <label for="number">Quantity</label>
+            <input type="number" id="number" name="number" placeholder="Enter a number" mix="1" max="100" step="1" required>
+
+            <button type="submit">Submit</button>
+
+            <label for="date">Date</label>
+            <input type="date" id="date" name="date" required>
+
+            <button type="submit">Submit</button>
+
+            <label for="range">Rating <br>(between 1 - 10)</label><br>
+            <input type="range" name="range" id="range" min="1" max="10" step="1">
+
+            <button type="submit">Submit</button>
+
+            <label for="color">Color</label>
+            <input type="color" id="color" name="color" value="color" placeholder="Select a color">
+
+            <button type="submit">Submit</button>
+
+        </form>
+        <br>
+        <br>
+        <br>
+        <form action="/submit" method="post">
+
+            <label for="programming languages">Choose a programming language:</label>
+            <select name="programming languages" id="programming languages" required>
+                <option value="python">Python</option>
+                <option value="MySQL">MySQL</option>
+                <option value="html">HTML</option>
+                <option value="CSS">CSS</option>
+                <option value="javascript">Javascript</option>
+            </select>
+            <label>Beginner</label>
+            <input type="radio" id="beginner" name="beginner" value="beginner" >
+            
+            <label>Intermediate</label>
+            <input type="radio" id="intermediate" name="intermediate" value="intermediate">
+
+            <label>Advanced</label>
+            <input type="radio" id="advanced" name="advanced" value="advanced">
+
+            <h2>Perferred Platform</h2>
+            
+            <label>Web</label>
+            <input type="checkbox" id="web" name="wed" value="yes">
+
+            <label>Mobile</label>
+            <input type="checkbox" id="mobile" name="mobile" value="yes">
+
+            <label>Desktop</label>
+            <input type="checkbox" id="desktop" name="desktop" value="yes">
+
+        </form>
+        <br>
+        <div role="alert" aria-live="assertive" id="error-message">
+            Please fill out all required fields.
+        </div>
+    </body>
+</html>
